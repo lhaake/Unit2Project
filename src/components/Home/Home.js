@@ -16,7 +16,7 @@ const [newsData, setNewsData] = useState([])
 const getNews = async (input) => {
     console.log("Testing API data")
 
-    let newsUrl = `http://newsapi.org/v2/everything?q=${input}&from=${date}&sortBy=popularity&apiKey=7967fe7ec6e44428a417b6bc133b26f4`
+    let newsUrl = `http://newsapi.org/v2/everything?q=${input}&from=${date}&sortBy=relevancy&language=en&apiKey=7967fe7ec6e44428a417b6bc133b26f4`
 
 
     const response = await fetch(newsUrl)

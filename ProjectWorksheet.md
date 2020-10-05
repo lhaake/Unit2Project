@@ -121,10 +121,11 @@ based on the input
 | Component | Priority | Estimated Time | Actual Time | Status |
 | --- | :---: |  :---: | :---: | :---: |
 | Squad Meetings with Joe | H | 4hrs|  | - |
-| Setup React App on VS Code | H | 1hr|  | - |
+| Setup React App on VS Code | H | 1hr| 0.5hr | - |
 | Setup Components | H | 1hr|  | - |
 | Working with Components | H | 3hrs|  | - |
-| Working with API | H | 4hrs|  | - |
+| Working with API | H | 2hrs|  | - |
+| Research | H | 2hrs|  | - |
 | API: Render data on page | H | 3hrs|  | - |
 | Styling: API data | H | 5hrs|  | - |
 | Responsive Design | H | 4hrs|  | - |

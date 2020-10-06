@@ -20,7 +20,6 @@ const handleChange = event => {
     
     return (
         <>
-            <h1>This is the Form</h1>
             <p>Enter a keyword to search daily news articles!</p>
             <form onSubmit={handleSubmit}>
                 <input
@@ -28,7 +27,6 @@ const handleChange = event => {
                     placeholde="Enter a keyword"
                     value={keyword}
                     onChange={handleChange}
-                    
                 />
                 <button type="submit">Search</button>
             </form>

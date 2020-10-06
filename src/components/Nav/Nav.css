@@ -4,15 +4,19 @@
   flex-direction: row;
   align-items: left;
   justify-content: left;
-  background-color: orange;  /* #282c34 */
-  /* min-height: 100vh; */
-  /* font-size: calc(10px + 2vmin); */
-  text-decoration: none;
+  background-color: navy; /* #282c34 */
+  min-height: 10vh; 
+  font-size: calc(10px + 2vmin); 
 }
 
 .nav-bar h1 {
-    text-decoration: none;
     color: white;
     font-weight: bold;
     padding-left: 20px;
+}
+
+.nav-bar h3 {
+    color: white;
+    font-weight: bold;
+    
 }

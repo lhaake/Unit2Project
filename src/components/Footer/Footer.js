@@ -1,14 +1,19 @@
 import React from "react"
 import './Footer.css';
+import { Link } from "react-router-dom"
 
 const Footer = () => {
-
+    let textDecoration = "none";
     return (
-        <div>
-            <footer className="footer-section">
-                <h1>Footer</h1>
-                <h3>Github info here</h3>
-            </footer>
+        <div className="footer">
+            <Link to="/" style={{ textDecoration }}>
+                <h4>Home</h4>
+            </Link>
+
+            <Link to="/about" style={{ textDecoration }}>
+                <h4>About</h4>
+            </Link>
+            
         </div>
     )
 }

@@ -5,9 +5,9 @@ const About = () => {
 
     return (
         <div className="about-page"> 
-            <h2>This is the About Page!</h2>
-            <p>Info about project.</p>
-            <p>NewsAPI</p>
+            <p>Info about project here.</p>
+            <p>API used for this project: NewsAPI</p>
+            <p>GitHub link</p>
         </div>
     )
 }

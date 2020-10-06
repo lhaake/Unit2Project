@@ -19,7 +19,6 @@ const Article = (props) => {
                 <p>Date: {article.publishedAt}</p> 
             </div>
         )
-
     })
     return (
         <>

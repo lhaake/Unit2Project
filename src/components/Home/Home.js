@@ -1,4 +1,4 @@
-import React, { useState} from "react"
+import React, { useState, useEffect } from "react"
 import Form from "../Form/Form"
 import Article from "../Article/Article"
 import './Home.css';
@@ -12,35 +12,36 @@ const Home = () => {
     const dateString = new Date().toDateString();
     const date = new Date().toISOString().slice(0, 10);
 
+    const trusteddomains = [
+        "techcrunch.com", "wired.com", "news.vice.com", "usatoday.com/news", "time.com", "washingtonpost.com", "wsj.com", "npr.org", "politico.com", "theatlantic.com", "nytimes.com", "latimes.com", "bostonglobe.com", "nymag.com", "newsweek.com", "nbcnews.com", "news.nationalgeographic.com", "msnbc.com", "fortune.com", "espn.go.com", "us.cnn.com", "cbsnews.com", "buzzfeed.com", "pbs.org/newshour", "bloomberg.com", "bbc.co.uk/news", "axios.com", "apnews.com", "aljazeera.com", "abcnews.go.com"
+    ]
+
     // Make API Call
     const getNews = async (input) => {
         console.log("Testing API data")
 
-        let newsUrl = `http://newsapi.org/v2/everything?q=${input}&from=${date}&sortBy=relevancy&language=en&apiKey=7967fe7ec6e44428a417b6bc133b26f4`
+        let newsUrl = `http://newsapi.org/v2/everything?q=${input}&from=${date}&sortBy=relevancy&language=en&domains=${trusteddomains}&pageSize=10&apiKey=7967fe7ec6e44428a417b6bc133b26f4`
 
         const response = await fetch(newsUrl)
         const json = await response.json()
         setNewsData(json)
         console.log(json)
     }
-
-    // useEffect(() => {
-    // //  let url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=7967fe7ec6e44428a417b6bc133b26f4`
     
-    // getNews("covid19")
+    useEffect(() => {
+        getNews("covid-19")
 
-        
-    // }, []);
+    }, []);
 
     return (
-        <>
-            <h1>Top Headlines for Today, {dateString}</h1>
+        <div className="home">
+            <h1>Today's Top Headlines</h1>
             <Form getNews={getNews} />
             {/* Conditional rendering   */}
 
             { newsData.articles ? <Article newsData={newsData} /> : null}
 
-        </>
+        </div>
     )
 }
 

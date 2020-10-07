@@ -4,8 +4,8 @@
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Day 1 - Monday| Project Approval, Project Worksheet Due, Begin Building Application Structure | -
-|Day 2 - Tuesday| MVP, Application Structure & Working with API | -
+|Day 1 - Monday| Project Approval, Project Worksheet Due, Begin Building Application Structure | Done
+|Day 2 - Tuesday| MVP, Application Structure & Working with API | Done
 |Day 3 - Wednesday| MVP, Working with API, Styling & PostMVP  | -
 |Day 4 - Thursday| Styling, PostMVP, Work on ReadME & Deployment to Netlify | -
 |Day 5 - Friday| Final Touches, Work on ReadME, Update Project Worksheet & Presentation | -
@@ -13,7 +13,7 @@
 
 ## Project Links
 
-- [My github repo link](https://github.com/lhaake/project2-react)
+- [My github repo link](https://github.com/lhaake/Unit2Project)
 - [add your deployment link]()
 
 ## Project Description

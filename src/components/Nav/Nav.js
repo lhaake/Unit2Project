@@ -13,12 +13,13 @@ const Nav = () => {
           <nav className="nav-bar">
 
             <Link to="/" style={{textDecoration}}>
-              <h1>Daily News</h1>
-              <h3>{date}</h3>
+              <h1 className="site-title">Daily News</h1>
+            <h3 className="date">{date}</h3>
+              
             </Link>
 
             <Link to="/about" style={{ textDecoration }}>
-              <h1 className="about">About</h1>
+              <h3 className="about">About</h3>
             </Link> 
 
           </nav>

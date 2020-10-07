@@ -1,22 +1,27 @@
 
 .nav-bar {
   display: flex;
-  flex-direction: row;
-  align-items: left;
-  justify-content: left;
-  background-color: navy; /* #282c34 */
+  justify-content: space-between;
+  background-color: navy; 
   min-height: 10vh; 
   font-size: calc(10px + 2vmin); 
 }
 
-.nav-bar h1 {
-    color: white;
-    font-weight: bold;
-    padding-left: 20px;
-}
-
 .nav-bar h3 {
     color: white;
-    font-weight: bold;
-    
+    font-weight: bold; 
+} 
+.nav-bar .date {
+  color: white;
+  padding-left: 40px;
+}
+
+.nav-bar .site-title {
+  color: white;
+  padding-left: 20px;
+}
+
+.nav-bar .about {
+  color: white;
+    padding-right: 100px;
 }

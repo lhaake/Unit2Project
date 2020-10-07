@@ -4,9 +4,9 @@
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Day 1 - Monday| Project Approval, Project Worksheet Due, Begin Building Application Structure | Done
-|Day 2 - Tuesday| MVP, Application Structure & Working with API | Done
-|Day 3 - Wednesday| MVP, Working with API, Styling & PostMVP  | -
+|Day 1 - Monday| Project Approval, Project Worksheet Due, Begin Building Application Structure | Complete
+|Day 2 - Tuesday| MVP, Application Structure & Working with API | Complete
+|Day 3 - Wednesday| MVP, Styling API data, & PostMVP  | Complete
 |Day 4 - Thursday| Styling, PostMVP, Work on ReadME & Deployment to Netlify | -
 |Day 5 - Friday| Final Touches, Work on ReadME, Update Project Worksheet & Presentation | -
 
@@ -18,25 +18,16 @@
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
-
-I'm interested in creating an app that displays daily top headlines for a specifc day. 
-Other ideas: 
-- filtering news articles based on category (covid19, tech, etc) 
-- search by keyword 
-- filter news by source
-- top headlines on page load
-
+Daily News is an app that displays top headlines based on a keyword search. 
 
 ## API
 
-I've chosen the [NewsAPI](https://newsapi.org/docs/endpoints/sources)
+[NewsAPI](https://newsapi.org/docs/endpoints/sources)
 
 **NewsAPI Limitations** 
-- News Sources are limited (81 English language sources and 55 US-based sources)
-- Top headlines vary in their reputability (some sources I've never heard of) and not sure how they are being pulled if not from a source list (null) -- *look into this in the documentation*
+- The top headlines news sources vary in their journalistic reputability and trustworthiness (facebook, tabloid, some sources I've never heard of)
 - Request limit for free account: 500 per day
-- Requires an API key 
+- Issues related to deployment - localhost only for free accounts
 
 ```
 {
@@ -54,15 +45,7 @@ I've chosen the [NewsAPI](https://newsapi.org/docs/endpoints/sources)
 },
 ```
 
-## Notes 
-
-- I created a static data.js file in case I reach a request limit (in the event of an infinite loop)
-- Think about when someone searches a keyword and there are no matches. Conditional rendering 
-
-
 ## Wireframes
-
-Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Also, define the the React components and the architectural design of your app.
 
 - [My draft wireframe](https://res.cloudinary.com/lhaake/image/upload/v1601645247/Unit%202%20-%20React%20Project/Draft%20Wireframe%2010/1.jpg)
 - [Mobile](https://res.cloudinary.com/lhaake/image/upload/v1601674862/Unit%202%20-%20React%20Project/Wireframes%20/Mobile%20Version.png)
@@ -71,8 +54,6 @@ Upload images of wireframe to cloudinary and add the link here with a descriptio
 - [React architecture](https://docs.google.com/drawings/d/1x1BCh18IVVlyKlMaCmLbjEi0czuRpNbDz5qAuVNrp70/edit)
 
 ## Components
-
-Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components. 
 
 | Component | Description | 
 | --- | :---: |  
@@ -121,17 +102,17 @@ based on the input
 | Component | Priority | Estimated Time | Actual Time | Status |
 | --- | :---: |  :---: | :---: | :---: |
 | Squad Meetings with Joe | H | 4hrs|  | - |
-| Setup React App on VS Code | H | 1hr| 0.5hr | - |
-| Setup Components | H | 1hr|  | - |
-| Working with Components | H | 3hrs|  | - |
-| Working with API | H | 2hrs|  | - |
-| Research | H | 2hrs|  | - |
-| API: Render data on page | H | 3hrs|  | - |
-| Styling: API data | H | 5hrs|  | - |
-| Responsive Design | H | 4hrs|  | - |
-| About Page | L | 1.5hr|  | - |
-| Nav | L | 1.5hr|  | - |
-| Footer | L | 1.5hr|  | - |
+| Setup React App on VS Code | H | 1hr| 0.5hr | Complete |
+| Setup Components | H | 1hr| 1hr | Complete |
+| Working with Components | H | 3hrs| 3hrs | Complete |
+| Working with API | H | 2hrs| 1hr | Complete |
+| Research | H | 2hrs| 3.5hrs | Complete |
+| API: Render data on page | H | 3hrs| 1hr | Complete |
+| Styling: API data | H | 5hrs| 2hrs | Complete |
+| Responsive Design | H | 4hrs| 2hrs | Complete|
+| About Page | L | 1.5hr| 1hr | - |
+| Nav | L | 1.5hr| 1hr | - |
+| Footer | L | 1.5hr| 1hr | - |
 | Testing | H | 2hrs|  | - |
 | Deployment to Netlify | H | 2hrs|  | - |
 | Total |  | 33.5hrs|  | |
@@ -140,10 +121,10 @@ based on the input
 ## PostMVP Timeline
 | Component | Priority | Estimated Time | Actual Time | Notes |
 | --- | :---: |  :---: | :---: | :---: | 
-| Render Top Headlines  | M | 5hr |  |  |
-| Filtering News Sources | M | 5hr |  |  |
+| Render Top Headlines  | M | 5hr | 0.75hr | Complete |
+| Filtering News Sources | M | 5hr | 1.5hr | Complete |
 | Favorites Component | M | 5hr | |  |
-| Total |  | 20hrs|  | |
+| Total |  | 15hrs|  | |
 
 ## Additional Libraries
  Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc. 

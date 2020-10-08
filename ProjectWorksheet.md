@@ -101,7 +101,7 @@ based on the input
 
 | Component | Priority | Estimated Time | Actual Time | Status |
 | --- | :---: |  :---: | :---: | :---: |
-| Squad Meetings with Joe | H | 4hrs|  | - |
+| Squad Meetings with Joe | H | 4hrs| 4hrs | Complete |
 | Setup React App on VS Code | H | 1hr| 0.5hr | Complete |
 | Setup Components | H | 1hr| 1hr | Complete |
 | Working with Components | H | 3hrs| 3hrs | Complete |
@@ -110,11 +110,11 @@ based on the input
 | API: Render data on page | H | 3hrs| 1hr | Complete |
 | Styling: API data | H | 5hrs| 2hrs | Complete |
 | Responsive Design | H | 4hrs| 2hrs | Complete|
-| About Page | L | 1.5hr| 1hr | - |
-| Nav | L | 1.5hr| 1hr | - |
-| Footer | L | 1.5hr| 1hr | - |
-| Testing | H | 2hrs|  | - |
-| Deployment to Netlify | H | 2hrs|  | - |
+| About Page | L | 1.5hr| 1hr | Complete |
+| Nav | L | 1.5hr| 1hr | Complete |
+| Footer | L | 1.5hr| 1hr | Complete |
+| Testing / Troubleshooting | H | 2hrs| 2hrs | Complete |
+| Deployment to Netlify | H | 2hrs| - | Unable to deploy |
 | Total |  | 33.5hrs|  | |
 
 
@@ -123,8 +123,8 @@ based on the input
 | --- | :---: |  :---: | :---: | :---: | 
 | Render Top Headlines  | M | 5hr | 0.75hr | Complete |
 | Filtering News Sources | M | 5hr | 1.5hr | Complete |
-| Favorites Component | M | 5hr | |  |
-| Total |  | 15hrs|  | |
+| Favorites Component | M | 5hr | 3.5hrs | Complete |
+| Total |  | 15hrs| 5.75hrs | |
 
 ## Additional Libraries
  Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc. 

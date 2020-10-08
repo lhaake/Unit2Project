@@ -20,7 +20,7 @@ const Nav = () => {
             <Link to="/about" style={{ textDecoration }}>
               <h3 className="about">About</h3>
             </Link> 
-
+            
           </nav>
         </div>
         

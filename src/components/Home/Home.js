@@ -7,7 +7,6 @@ const Home = () => {
     //state to keep track of news data from API
     const [newsData, setNewsData] = useState([])
 
-
     //JS Date 
     const dateString = new Date().toDateString();
     const date = new Date().toISOString().slice(0, 10);
@@ -21,7 +20,7 @@ const Home = () => {
     const getNews = async (input) => {
         console.log("Testing API data")
 
-        let newsUrl = `http://newsapi.org/v2/everything?q=${input}&from=${date}&sortBy=relevancy&language=en&domains=${trusteddomains}&pageSize=15&apiKey=7967fe7ec6e44428a417b6bc133b26f4`
+        let newsUrl = `http://newsapi.org/v2/everything?q=${input}&from=${date}&sortBy=relevancy&language=en&domains=${trusteddomains}&pageSize=10&apiKey=7967fe7ec6e44428a417b6bc133b26f4`
 
         const response = await fetch(newsUrl)
         const json = await response.json()
@@ -36,12 +35,12 @@ const Home = () => {
 
     return (
         <div className="home">
+
             <h1>Today's Top Headlines</h1>
             <Form getNews={getNews} />
             {/* Conditional rendering   */}
 
             { newsData.articles ? <Article newsData={newsData} /> : null}
-
         </div>
     )
 }

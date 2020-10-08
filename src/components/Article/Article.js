@@ -1,17 +1,34 @@
-import React from "react"
+import React, {useState} from "react"
 import './Article.css';
+import Favorites from "../Favorites/Favorites"
 
 const Article = (props) => {
 
+    const [favorites, setFavorites] = useState([])
+  
 
     console.log("testing props from Article", props.newsData.articles)
 
-    const data = props.newsData.articles
+ 
 
-    const handleFavoritesClick = event => {
+    const handleFavoritesClick = favarticle => {
         console.log("Add favorites button clicked!")
-
+        setFavorites([...favorites, {
+            title: favarticle.title,
+            source: favarticle.source.name,
+            description: favarticle.description,
+            url: favarticle.url,
+            urlToImage: favarticle.urlToImage
+        }])
     }
+
+    const removeFromFaves = index => {
+        console.log("Remove from favorites button clicked!")
+        const favesArray = favorites.filter((article, i) => i !== index)
+        setFavorites(favesArray)
+    }
+
+    const data = props.newsData.articles
 
     let displayNews = data.map((article, index) => {
         return (
@@ -28,7 +45,7 @@ const Article = (props) => {
                         "_blank">Read Full Article</a></li>
         
                 </ul>
-                <button onClick={handleFavoritesClick}>Add to Favorites</button>
+                <button onClick={() => handleFavoritesClick(article)}>Add to Favorites</button>
 
 
                 {/* <p>Date: {article.publishedAt}</p>  */}
@@ -39,14 +56,9 @@ const Article = (props) => {
     return (
         <>
             {displayNews}
+            <Favorites favorites={favorites} handleClick={removeFromFaves} />
         </>
     )
 }
 
 export default Article
-
-    // < ul >
-    //                 <li className="news-source">{article.source.name}</li>
-    //                 <li className="description">{article.description}  <a href={article.url} target=
-    //                     "_blank">Read Full Article</a></li>
-    //             </ul >

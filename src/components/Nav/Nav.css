@@ -2,7 +2,7 @@
 .nav-bar {
   display: flex;
   justify-content: space-between;
-  background-color: navy; 
+  background-color: #0f3460;
   min-height: 10vh; 
   font-size: calc(10px + 2vmin); 
 }
@@ -11,15 +11,17 @@
     color: white;
     font-weight: bold; 
 } 
+
 .nav-bar .date {
-  color: white;
+  color: lightgray;
   padding-left: 40px;
 }
 
 .nav-bar .site-title {
   color: white;
   padding-left: 20px;
-}
+  font-family: Arial, Helvetica, sans-serif;
+} 
 
 .nav-bar .about {
   color: white;

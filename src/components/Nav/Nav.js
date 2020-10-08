@@ -14,8 +14,7 @@ const Nav = () => {
 
             <Link to="/" style={{textDecoration}}>
               <h1 className="site-title">Daily News</h1>
-            <h3 className="date">{date}</h3>
-              
+              <h3 className="date">{date}</h3>
             </Link>
 
             <Link to="/about" style={{ textDecoration }}>

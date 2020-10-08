@@ -7,8 +7,8 @@
 |Day 1 - Monday| Project Approval, Project Worksheet Due, Begin Building Application Structure | Complete
 |Day 2 - Tuesday| MVP, Application Structure & Working with API | Complete
 |Day 3 - Wednesday| MVP, Styling API data, & PostMVP  | Complete
-|Day 4 - Thursday| Styling, PostMVP, Work on ReadME & Deployment to Netlify | -
-|Day 5 - Friday| Final Touches, Work on ReadME, Update Project Worksheet & Presentation | -
+|Day 4 - Thursday| Styling, PostMVP | Complete
+|Day 5 - Friday| Final Touches, Update Project Worksheet & Presentation | -
 
 
 ## Project Links

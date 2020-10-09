@@ -53,7 +53,6 @@ function App() {
           <Favorites 
             favorites={favorites}
             {...routerProps} 
-            // this is coming from state on line 9
            removeFromFaves={removeFromFaves}
           /> } 
         />

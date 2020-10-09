@@ -27,7 +27,7 @@ Daily News is an app that displays top headlines based on a keyword search.
 **NewsAPI Limitations** 
 - The top headlines news sources vary in their journalistic reputability and trustworthiness (facebook, tabloid, some sources I've never heard of)
 - Request limit for free account: 500 per day
-- Issues related to deployment - localhost only for free accounts. [Screeshot](https://res.cloudinary.com/lhaake/image/upload/v1602095923/Unit%202%20-%20React%20Project/Screen_Shot_2020-10-07_at_2.32.32_PM_crsozd.png)
+- Issues related to deployment - localhost only for free accounts. [Screenshot](https://res.cloudinary.com/lhaake/image/upload/v1602095923/Unit%202%20-%20React%20Project/Screen_Shot_2020-10-07_at_2.32.32_PM_crsozd.png)
 
 ```
 {
@@ -115,7 +115,7 @@ based on the input
 | Footer | L | 1.5hr| 1hr | Complete |
 | Testing / Troubleshooting | H | 2hrs| 2hrs | Complete |
 | Deployment to Netlify | H | 2hrs| - | Unable to deploy |
-| Total |  | 33.5hrs| 24.5hrs | |
+| Total |  | 33.5hrs| 25hrs | |
 
 
 ## PostMVP Timeline
@@ -127,11 +127,8 @@ based on the input
 | Total |  | 15hrs| 7hrs | |
 
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc. 
 
 ## Code Snippet
-
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description.  Code snippet should not be greater than 10 lines of code. 
 
 The NewsAPI had a number of request parameters for filtering queries based on keyword entered, Date or Date Range, Language, Country, Page Size (number of articles to display) per request, Domains of news sources, sort by - popularity or relevancy, among others. 
 
@@ -148,7 +145,7 @@ The NewsAPI had a number of request parameters for filtering queries based on ke
 ```
 
 ## Challenges 
-- Favorites Component and functionality.
+1. Favorites Component and functionality.
 	- I built out my app with the keyword search functionality first (MVP). Afterwards, I went on to PostMVP to add a Favorites Component where a user could save articles to read as they searched. 
 	- When I started planning out the functionality for the Favorites Component  on Thursday, I thought it would make sense to add my favorites state to my Home component (where I had state), while App did not have state up to this point. I was confused because the data wasn't rendering on the Favorites page, but the favorites were being stored in the new array in state (in console.logs I could see as I clicked on the button). 
 	- I realized I needed to make App to be a stateful component, have my Favorites Route in App, move my functions, and pass everything down from **App**: 
@@ -158,7 +155,7 @@ The NewsAPI had a number of request parameters for filtering queries based on ke
 		- App => Home: pass down handleFavoritesClick() to Home 
 			- Home => Article: pass down the props.handleFavoritesClick() to Article
 
-- Not able to deploy app due to API restrictions for free accounts
+2. Not able to deploy app due to API restrictions for free accounts
 
 ## Future Direction & Ideas
 - Favorites (styling)
@@ -174,4 +171,5 @@ The NewsAPI had a number of request parameters for filtering queries based on ke
 - Agenda and goals for day
 - Take breaks
 - Work with classmates and ask for help 
-- Keep track of time spent on styling
+- Keep track of time spent on styling to move on or revisit later
+- Research time - watching videos - when something doesn't make sense 

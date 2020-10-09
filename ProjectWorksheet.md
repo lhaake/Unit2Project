@@ -8,7 +8,7 @@
 |Day 2 - Tuesday| MVP, Application Structure & Working with API | Complete
 |Day 3 - Wednesday| MVP, Styling API data, & PostMVP  | Complete
 |Day 4 - Thursday| Styling, PostMVP | Complete
-|Day 5 - Friday| Final Touches, Update Project Worksheet & Presentation | -
+|Day 5 - Friday| Final Touches, Update Project Worksheet & Presentation | Complete
 
 
 ## Project Links
@@ -27,7 +27,7 @@ Daily News is an app that displays top headlines based on a keyword search.
 **NewsAPI Limitations** 
 - The top headlines news sources vary in their journalistic reputability and trustworthiness (facebook, tabloid, some sources I've never heard of)
 - Request limit for free account: 500 per day
-- Issues related to deployment - localhost only for free accounts
+- Issues related to deployment - localhost only for free accounts. [Screeshot](https://res.cloudinary.com/lhaake/image/upload/v1602095923/Unit%202%20-%20React%20Project/Screen_Shot_2020-10-07_at_2.32.32_PM_crsozd.png)
 
 ```
 {
@@ -101,30 +101,30 @@ based on the input
 
 | Component | Priority | Estimated Time | Actual Time | Status |
 | --- | :---: |  :---: | :---: | :---: |
-| Squad Meetings with Joe | H | 4hrs| 4hrs | Complete |
+| Squad Meetings with Joe | H | 4hrs| 3hrs | Complete |
 | Setup React App on VS Code | H | 1hr| 0.5hr | Complete |
 | Setup Components | H | 1hr| 1hr | Complete |
 | Working with Components | H | 3hrs| 3hrs | Complete |
 | Working with API | H | 2hrs| 1hr | Complete |
 | Research | H | 2hrs| 3.5hrs | Complete |
 | API: Render data on page | H | 3hrs| 1hr | Complete |
-| Styling: API data | H | 5hrs| 2hrs | Complete |
-| Responsive Design | H | 4hrs| 2hrs | Complete|
+| Styling: API data | H | 5hrs| 2.5hrs | Complete |
+| Styling | H | 4hrs| 4hrs | Complete|
 | About Page | L | 1.5hr| 1hr | Complete |
-| Nav | L | 1.5hr| 1hr | Complete |
+| Nav | L | 1.5hr| 1.5hr | Complete |
 | Footer | L | 1.5hr| 1hr | Complete |
 | Testing / Troubleshooting | H | 2hrs| 2hrs | Complete |
 | Deployment to Netlify | H | 2hrs| - | Unable to deploy |
-| Total |  | 33.5hrs|  | |
+| Total |  | 33.5hrs| 24.5hrs | |
 
 
 ## PostMVP Timeline
 | Component | Priority | Estimated Time | Actual Time | Notes |
 | --- | :---: |  :---: | :---: | :---: | 
-| Render Top Headlines  | M | 5hr | 0.75hr | Complete |
+| Render Top Headlines  | M | 5hr | 0.5hr | Complete |
 | Filtering News Sources | M | 5hr | 1.5hr | Complete |
-| Favorites Component | M | 5hr | 3.5hrs | Complete |
-| Total |  | 15hrs| 5.75hrs | |
+| Favorites Component | M | 5hr | 5hrs | Complete |
+| Total |  | 15hrs| 7hrs | |
 
 ## Additional Libraries
  Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc. 
@@ -133,20 +133,45 @@ based on the input
 
 Use this section to include a brief code snippet of functionality that you are proud of an a brief description.  Code snippet should not be greater than 10 lines of code. 
 
+The NewsAPI had a number of request parameters for filtering queries based on keyword entered, Date or Date Range, Language, Country, Page Size (number of articles to display) per request, Domains of news sources, sort by - popularity or relevancy, among others. 
+
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+  // Make API Call
+    const getNews = async (input) => {
+
+        let newsUrl = `http://newsapi.org/v2/everything?q=${input}&from=${date}&sortBy=relevancy&language=en&domains=${trusteddomains}&pageSize=10&apiKey=7967fe7ec6e44428a417b6bc133b26f4`
+
+        const response = await fetch(newsUrl)
+        const json = await response.json()
+        setNewsData(json)
+    }
 ```
 
-## Issues and Resolutions
+## Challenges 
+- Favorites Component and functionality.
+	- I built out my app with the keyword search functionality first (MVP). Afterwards, I went on to PostMVP to add a Favorites Component where a user could save articles to read as they searched. 
+	- When I started planning out the functionality for the Favorites Component  on Thursday, I thought it would make sense to add my favorites state to my Home component (where I had state), while App did not have state up to this point. I was confused because the data wasn't rendering on the Favorites page, but the favorites were being stored in the new array in state (in console.logs I could see as I clicked on the button). 
+	- I realized I needed to make App to be a stateful component, have my Favorites Route in App, move my functions, and pass everything down from **App**: 
+		- Move state and declare handleFavoritesClick() and removeFromFaves() functions in App
+		- Route Favorites "/favorites" 
+		- App => Favorites: pass down the favorites state and removeFromFaves() to Favorites
+		- App => Home: pass down handleFavoritesClick() to Home 
+			- Home => Article: pass down the props.handleFavoritesClick() to Article
 
-#### Issue 1: 
-**ERROR**:                    
-**RESOLUTION**:  
-
+- Not able to deploy app due to API restrictions for free accounts
 
 ## Future Direction & Ideas
+- Favorites (styling)
+- Footer position issues
+- Add a button that when clicked displays articles that have been sorted by category: Health, Technology, Science, World, National, Arts, Sports, Bussiness, Election, etc.
 
-
-## Lessons Learned 
+## Takeaways
+- Read API documentation before deciding and look for restrictions related to deployment
+- Starting out simplistic for MVP worked well - get comfortable with React
+- Planning out and thinking through React architecture in detail helped
+	- Account for PMVP items if will involve new component / change in where state will need to be
+- Keep to a schedule
+- Agenda and goals for day
+- Take breaks
+- Work with classmates and ask for help 
+- Keep track of time spent on styling

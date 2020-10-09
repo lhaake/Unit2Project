@@ -5,7 +5,7 @@ const Favorites = (props) => {
 
     console.log("testing props in favorites", props.favorites)
 
-    const faves = props.favorites 
+    const faves = props.favorites
 
     let showFavorites = faves.map( (fave, index) => { 
     return (
@@ -20,24 +20,18 @@ const Favorites = (props) => {
                         "_blank">Read Full Article</a></li>
 
                 </ul>
-            <button onClick={() => props.handleClick(index)}>Remove from Favorites</button>
-      
+            <button onClick={() => props.removeFromFaves(index)}>Remove from Favorites</button>
 
-            
-            {/* <p>{fave.title}</p>
-            <p>{fave.source.name}</p>
-            <p>{fave.description}</p>
-            <p>{fave.url}</p> */}
         </div>
-      
     )
     })
     return (
-      
+    <div>
+        <h1>My Favorites</h1>
          <div className="favorites">
-            <h1>My Favorites</h1>
-        
-        {showFavorites}
+            
+            {showFavorites}
+        </div>
      </div>
     )
   

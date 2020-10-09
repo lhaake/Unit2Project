@@ -17,13 +17,17 @@ const Nav = () => {
               <h3 className="date">{date}</h3>
             </Link>
 
-            <Link to="/about" style={{ textDecoration }}>
-              <h3 className="about">About</h3>
-            </Link> 
-            
+            <ul className="nav-pages">
+               <Link to="/about" style={{ textDecoration }}>
+              <li>About</li>
+               </Link> 
+               <Link to="/favorites" style={{ textDecoration }}>
+              <li>Favorites</li>
+                </Link> 
+            </ul>
+
           </nav>
         </div>
-        
     )
 }
 

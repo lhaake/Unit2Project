@@ -21,7 +21,7 @@ const Home = (props) => {
     // Make API Call
     const getNews = async (input) => {
 
-        let newsUrl = `http://newsapi.org/v2/everything?q=${input}&from=${date}&sortBy=relevancy&language=en&domains=${trusteddomains}&pageSize=10&apiKey=${process.env.REACT_APP_API_KEY}`
+        let newsUrl = `https://newsapi.org/v2/everything?q=${input}&from=${date}&sortBy=relevancy&language=en&domains=${trusteddomains}&pageSize=10&apiKey=${process.env.REACT_APP_API_KEY}`
 
         const response = await fetch(newsUrl)
         const json = await response.json()

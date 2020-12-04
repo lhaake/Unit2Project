@@ -17,7 +17,7 @@ const Home = (props) => {
     ]
     
     const proxyUrl = "http://cors-anywhere.herokuapp.com/"
-    
+
     // Make API Call
     const getNews = async (input) => {
 

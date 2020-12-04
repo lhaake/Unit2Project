@@ -16,7 +16,7 @@ const Home = (props) => {
         "techcrunch.com", "wired.com", "news.vice.com", "usatoday.com/news", "time.com", "washingtonpost.com", "wsj.com", "npr.org", "politico.com", "theatlantic.com", "nytimes.com", "latimes.com", "bostonglobe.com", "nymag.com", "newsweek.com", "nbcnews.com", "news.nationalgeographic.com", "msnbc.com", "fortune.com", "espn.go.com", "us.cnn.com", "cbsnews.com", "buzzfeed.com", "pbs.org/newshour", "bloomberg.com", "bbc.co.uk/news", "axios.com", "apnews.com", "aljazeera.com", "abcnews.go.com"
     ]
     
-    const proxyUrl = "https://cors-anywhere.herokuapp.com/"
+    const proxyUrl = "http://cors-anywhere.herokuapp.com/"
     
     // Make API Call
     const getNews = async (input) => {
